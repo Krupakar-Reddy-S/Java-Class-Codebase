@@ -9,6 +9,7 @@ public class kaka {
                 }
             }
             if(C == 2){
+                //System.out.print(C);
                 return true;
             }
 
@@ -25,6 +26,7 @@ public class kaka {
                 }
             }
             if(C == 2){
+                System.out.print(C);
                 return i;
             }
         }
@@ -41,6 +43,7 @@ public class kaka {
                 }
             }
             if(C == 2){
+                System.out.print(C);
                 return i;
             }
         }
@@ -49,13 +52,13 @@ public class kaka {
 
 
     public static int solve(int A) {
-
-        if(isPrime(A)){
+        //System.out.print(isPrime(A));
+        if((boolean) isPrime(A)){
             int Prev = prevPrime(A);
             int Next = nextPrime(A);
 
-            //System.out.println(Prev);
-            //System.out.println(Next);
+            System.out.println(Prev);
+            System.out.println(Next);
 
             int X = Prev;
             int Abs = Math.abs(A - Prev);
@@ -82,7 +85,7 @@ public class kaka {
         }
         Factors = Arrays.copyOf(Factors, Factors.length - (A-Count));
 
-        //System.out.print(Arrays.toString(Factors));
+        System.out.print(Arrays.toString(Factors));
 
 
         int[] Primes = new int[A*2];
@@ -103,26 +106,25 @@ public class kaka {
         }
 
         Primes = Arrays.copyOf(Primes, Pcount);
-        //System.out.print(Arrays.toString(Primes)); 
+        System.out.print(Arrays.toString(Primes)); 
 
 
         N = A;
-        int X = (int) Math.pow(2,Factors.length);
+        int X = 0;
         int Abs = Math.abs(A - X);
 
         int Common = 1;
         for(int j = 0; j < Factors.length; j++){
             int prime = 0;
+            Common = N/Factors[j];
+
             for(prime = 0; prime < Primes.length; prime++){
-                if(Factors.length == 1){
-                    Common = Factors[0];
-                }
-                else{
-                    Common = N/Factors[j];
+
+                if(Primes[prime] != Factors[j]){
                     Common*=Primes[prime];
                 }
-
-                if((Math.abs(A - Common) < Abs) && Common != A){
+                
+                if((Math.abs(A - Common) <= Abs) && Common != A){
                     Abs = Math.abs(A - Common);
                     X = Common;
                 }
@@ -133,6 +135,6 @@ public class kaka {
     }
 
     public static void main(String args[]){
-        System.out.println((solve(32)));
+        System.out.println((solve(97)));
     }
 }
