@@ -17,7 +17,6 @@ public class Best {
     }
 
     public static void main(String args[]){
-        //solve("12");
         System.out.println(solve("12"));
     }
 }
