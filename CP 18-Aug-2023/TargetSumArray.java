@@ -47,7 +47,7 @@ public class TargetSumArray {
 
         int List[] = arrayInput(N, sc);
 
-        System.out.print();
+       // System.out.print();
 
     }
 }
