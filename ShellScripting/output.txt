@@ -1,0 +1,18 @@
+PING google.com(maa03s40-in-x0e.1e100.net (2404:6800:4007:825::200e)) 56 data bytes
+64 bytes from maa03s40-in-x0e.1e100.net (2404:6800:4007:825::200e): icmp_seq=1 ttl=56 time=25.3 ms
+
+--- google.com ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 25.252/25.252/25.252/0.000 ms
+PING com.com(li647-167.members.linode.com (64:ff9b::c63a:76a7)) 56 data bytes
+64 bytes from li647-167.members.linode.com (64:ff9b::c63a:76a7): icmp_seq=1 ttl=40 time=281 ms
+
+--- com.com ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 280.693/280.693/280.693/0.000 ms
+PING www.amazon.com (127.0.0.1) 56(84) bytes of data.
+64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.020 ms
+
+--- www.amazon.com ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.020/0.020/0.020/0.000 ms

@@ -1,2 +1,2 @@
-# Java-Class-Codebase
-Java files from computer programming class
+# SST-Trimester1-Codebase
+Trimester1 Courses Codebase
