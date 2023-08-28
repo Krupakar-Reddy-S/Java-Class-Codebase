@@ -68,7 +68,7 @@ class BufferImg{
         // BufferedImage inImg=ImageIO.read(inFile);
         BufferedImage inImg=ImageIO.read(new File("CP 22-Aug-2023/image.jpg"));
         // printPixelValues(inImg);
-        // BufferedImage grayImg =convertToGrayScale(inImg);
+        // BufferedImage grayImg =convertToGrayScale(inImg); 
         BufferedImage brigtImg =incBright(inImg,30);
         ImageIO.write(brigtImg,"jpg", new File("CP 22-Aug-2023/output.jpg"));
 
