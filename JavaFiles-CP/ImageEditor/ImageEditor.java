@@ -17,9 +17,9 @@ public class ImageEditor {
                 int red = pixel.getRed();
                 int green = pixel.getGreen();
                 int blue = pixel.getBlue();
-                red += (a * red) / 100;
-                green += (a * green) / 100;
-                blue += (a * blue) / 100;
+                red += a;
+                green += a;
+                blue += a;
                 if (red > 255)
                     red = 255;
                 if (green > 255)
