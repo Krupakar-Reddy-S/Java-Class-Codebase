@@ -66,7 +66,7 @@ class BufferImg{
     public static void main(String[] args) throws IOException {
         // File inFile= new File("/home/user/Pictures/image.jpg");
         // BufferedImage inImg=ImageIO.read(inFile);
-        BufferedImage inImg=ImageIO.read(new File("CP 22-Aug-2023/image.jpg"));
+        BufferedImage inImg= ImageIO.read(new File("CP 22-Aug-2023/image.jpg"));
         // printPixelValues(inImg);
         // BufferedImage grayImg =convertToGrayScale(inImg); 
         BufferedImage brigtImg =incBright(inImg,30);
