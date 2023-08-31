@@ -7,7 +7,7 @@ import java.awt.image.BufferedImage;
 
 public class ImageEditor {
 
-    public static BufferedImage increaseBrightness(BufferedImage input, int a) {
+    public static BufferedImage changeBrightness(BufferedImage input, int Brightness) {
         int height = input.getHeight();
         int width = input.getWidth();
         BufferedImage OutputImage = new BufferedImage(width, height, BufferedImage.TYPE_3BYTE_BGR);
@@ -17,9 +17,9 @@ public class ImageEditor {
                 int red = pixel.getRed();
                 int green = pixel.getGreen();
                 int blue = pixel.getBlue();
-                red += a;
-                green += a;
-                blue += a;
+                red += Brightness;
+                green += Brightness;
+                blue += Brightness;
                 if (red > 255)
                     red = 255;
                 if (green > 255)
@@ -96,7 +96,7 @@ public class ImageEditor {
         int width = input.getWidth();
         BufferedImage OutputImage = new BufferedImage(width, height,BufferedImage.TYPE_3BYTE_BGR);
         for (int j = 0; j < width; j++) {
-            for (int i = 0; i < (int) Math.ceil(height) / 2; i++) {
+            for (int i = 0; i < height / 2; i++) {
                 Color temp = new Color(input.getRGB(j, i));
                 OutputImage.setRGB(j, i, input.getRGB(j, height - 1 - i));
                 OutputImage.setRGB(j, height - 1 - i, temp.getRGB());
@@ -189,7 +189,7 @@ public class ImageEditor {
                 case 2:
                     System.out.print("Change Brightness by: ");
                     int a = sc.nextInt();
-                    BufferedImage BrighterImage = increaseBrightness(inputImage, a);
+                    BufferedImage BrighterImage = changeBrightness(inputImage, a);
                     ImageIO.write(BrighterImage, FileExtension, OutputImage);
                     break;
 
