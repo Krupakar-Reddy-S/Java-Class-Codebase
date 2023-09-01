@@ -2,18 +2,23 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 class Coordinate {
-    int row = 0;
-    int column = 0;
+    int row;
+    int column;
 
     int[] value = {row,column};
 
-    public Coordinate(int row_, int column_){
-        row = row_;
-        column = column_;
+    Coordinate(){
+        row = 0;
+        column = 0;
     }
 
-    public void printCoordinate(){
-        System.out.println(Arrays.toString(value));
+    Coordinate(int row, int column){
+        this.row = row;
+        this.column = column;
+    }
+
+    public String toString(){
+        return Arrays.toString(value);
     }
 }
 
@@ -41,7 +46,7 @@ public class MatrixTarget {
 
         int[][] Array2 = {{1,2},{1,1}};
         Coordinate cord = getCoordinates(Array2, 3);
-        cord.printCoordinate();
+        System.out.println(cord);
 
         sc.close();
 
