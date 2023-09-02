@@ -7,18 +7,18 @@ class Coordinate {
 
     int[] value = {row,column};
 
-    Coordinate(){
+    public Coordinate(){
         row = 0;
         column = 0;
     }
 
-    Coordinate(int row, int column){
+    public Coordinate(int row, int column){
         this.row = row;
         this.column = column;
     }
 
     public String toString(){
-        return Arrays.toString(value);
+        return Arrays.toString(this.value);
     }
 }
 
