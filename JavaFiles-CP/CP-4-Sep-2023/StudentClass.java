@@ -1,21 +1,39 @@
 import java.util.*;
 
 class Student{
-    String name;
-    String email;
-    long phoneNumber;
-    int hometownPincode;
-    String mentorEmail;
-    int scholorship;
-    double CGR;
+    private String name;
+    private String email;
+    private String phoneNumber;
+    private int hometownPincode;
+    private String mentorEmail;
+    private int scholorship;
+    private double CGR;
 
-    int fees = 500000;
     
-    public Student(String name, String email, long phoneNumber){
+    public Student(String name, String email, String phoneNumber, int hometownPincode, int scholorship){
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
+        this.hometownPincode = hometownPincode;
+        this.scholorship = scholorship;
+    }
 
+    public String getMentorEmail(){
+        return mentorEmail;
+    }
+
+    public void setMentorEmail(String mentorEmail){
+        
+        if(scholorship >= 0 && scholorship <= 100){
+            this.mentorEmail = mentorEmail;
+        }
+        else{
+            System.out.println("Enter Valid value for Scholorship!");
+        }
+    }
+
+    public void setScholorship(int scholorship){
+        this.scholorship = scholorship;
     }
 
     public void printProfile(){
@@ -29,7 +47,8 @@ class Student{
     }
 
     public int calculateFees(){
-        return this.fees - (this.fees * this.scholorship/100);
+        int fees = 500000;
+        return fees - (fees * this.scholorship/100);
     }
     
 }
@@ -38,13 +57,9 @@ public class StudentClass {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        Student Krupakar = new Student("Krupakar Reddy", "krupakarreddy@gmail.com", 9876543210L);
-        Krupakar.hometownPincode = 605010;
-        Krupakar.scholorship = 25;
+        Student Krupakar = new Student("Krupakar Reddy", "krupakarreddy@gmail.com", "+91 9876543210", 605010, 25);
 
-        Student Naresh = new Student("Naresh Kumar", "nareshkumar@gmail.com", 1234567890L);
-        Naresh.hometownPincode = 502103;
-        Naresh.scholorship = 25;
+        Student Naresh = new Student("Naresh Kumar", "nareshkumar@gmail.com", "+91 1234567890", 502103, 25);
 
         System.out.println();
 
@@ -55,10 +70,10 @@ public class StudentClass {
         System.out.println();
 
         if(Krupakar.belongToSameLocality(Naresh)){
-            System.out.println("Krupakar and Naresh belong to same Locality.");
+            System.out.println("Krupakar and Naresh belong to the same Locality.");
         }
         else{
-            System.out.println("Krupakar and naresh belong to different Localities.");
+            System.out.println("Krupakar and Naresh belong to different Localities.");
         }
 
         System.out.println();
