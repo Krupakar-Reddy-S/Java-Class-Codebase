@@ -1,6 +1,8 @@
 # AutoCommit Cronjob
 This Repository has me adding code locally to it almost daily and it seemed very redundant for me to keep on syncing it online, So i have automated this process using a simple shell script and a cronjob. this process is explained below in detail.
 
+&nbsp;
+
 ## AutoCommit Shell Script
 
 ### File: AutoCommit.sh
@@ -37,6 +39,8 @@ echo "Successfully verified remote repository sync"
 
 #### NOTE: The full path of git is used, it can be found with the command "which git"
 
+&nbsp;
+
 ## AutoCommit Cronjob
 
 ```
@@ -50,5 +54,7 @@ echo "Successfully verified remote repository sync"
 3. Then we specify the absolute path to the **&nbsp; AutoCommit.sh &nbsp;** file which performs the git operations.
 
 #### Now this cronjob will run daily at 10 PM and commit and push chages to the repository automatically to github. 
+
+&nbsp;
 
 #### NOTE: The cronjob only runs if the system in which it is present is On and if it is missed the AutoCommit is not executed, but this can be solved with a tool called Anacron, which checks if a previous task was missed and executes it next time the system is On (will be updated here soon).

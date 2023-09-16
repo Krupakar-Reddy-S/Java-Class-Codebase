@@ -1,2 +1,4 @@
 # CLI-Class-Codebase
-Shell Scripyting files from CLI class
+### Shell Scripting files from CLI class
+
+#### [Link to AutoCommit.md file](https://github.com/Krupakar-Reddy-S/SST-Trimester1-Codebase/blob/main/ShellScripting/AutoCommit.md)
