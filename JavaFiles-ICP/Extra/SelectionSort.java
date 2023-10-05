@@ -1,6 +1,25 @@
 import java.util.Arrays;
 
 public class SelectionSort {
+
+    /* 
+     * Selection Sort:
+     * 
+     * Working: Selection sort repeatedly selects the minimum (or maximum) element from the unsorted portion of the Array 
+     *          and places it at the beginning of the sorted portion.
+     * 
+     * Stability: Selection sort is not stable.
+     * 
+     * Time Complexity(Best): O(n^2) - Same as the worst case.
+     * 
+     * Time Complexity(Worst): O(n^2) - This is the worst-case scenario.
+     * 
+     * Space Complexity: O(1) - Selection sort sorts the Array in-place.
+     * 
+     * Unique Feature: Selection sort repeatedly selects the minimum element and places it at the beginning of the 
+     *                 unsorted portion of the Array.
+     * 
+    */
     
     public static void swap(int[] A, int first, int second) {
         int temp = A[first];
