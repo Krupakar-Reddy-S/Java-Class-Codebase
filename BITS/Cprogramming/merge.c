@@ -36,7 +36,7 @@ int main() {
     int n2 = sizeof(A2) / sizeof(A2[0]);
 
     int n3 = n1 + n2;
-    int* A3 = (int*)malloc(n3 * sizeof(int));
+    int* A3 = (int*) malloc(n3 * sizeof(int));
 
     if (A3 == NULL) {
         printf("Memory allocation failed\n");
